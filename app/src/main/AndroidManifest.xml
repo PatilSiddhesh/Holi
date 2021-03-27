@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Holi">
         <activity
-            android:name=".GradientMixerActivity"
+            android:name=".ui.views.DraculaActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".MaterialColorsActivity"
+            android:name=".ui.views.GradientMixerActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.views.MaterialColorsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.views.HoliSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Holi.NoActionBar">

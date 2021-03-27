@@ -23,11 +23,12 @@
  *
  */
 
-package com.siddheshpatil.holi
+package com.siddheshpatil.holi.ui.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
 import com.siddheshpatil.holi.ui.composables.HoliLazyColorRow
 
 class MaterialColorsActivity : AppCompatActivity() {
@@ -35,7 +36,7 @@ class MaterialColorsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            HoliLazyColorRow(content = HoliSwatchSampleFactory.getColorPaletteList())
+            HoliLazyColorRow(content = HoliSampleColorFactory.getColorPaletteList())
         }
     }
 }

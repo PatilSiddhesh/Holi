@@ -23,11 +23,12 @@
  *
  */
 
-package com.siddheshpatil.holi
+package com.siddheshpatil.holi.data.samples
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import com.siddheshpatil.holi.brushes.GradientMixer
+import com.siddheshpatil.holi.colors.DraculaColor
 import com.siddheshpatil.holi.colors.MaterialColor
 
 /**
@@ -37,13 +38,13 @@ import com.siddheshpatil.holi.colors.MaterialColor
  * @since 27-03-2021
  *
  */
-object HoliSwatchSampleFactory {
+object HoliSampleColorFactory {
 
     /**
      * Provides a list of colors for sample showcase
      * @return List of list of pairs of colors and their names
      */
-    fun getColorPaletteList() : List<List<Pair<String, Color>>> {
+    fun getColorPaletteList(): List<List<Pair<String, Color>>> {
         val finalList = mutableListOf<List<Pair<String, Color>>>()
 
         val redList = mutableListOf<Pair<String, Color>>()
@@ -280,7 +281,7 @@ object HoliSwatchSampleFactory {
         yellowList.add(Pair("YELLOW A400", MaterialColor.YELLOW_A400))
         yellowList.add(Pair("YELLOW A700", MaterialColor.YELLOW_A700))
         finalList.add(yellowList)
-        
+
         val amberList = mutableListOf<Pair<String, Color>>()
         amberList.add(Pair("AMBER", MaterialColor.AMBER))
         //amberList.add(Pair("AMBER 50", Material.AMBER_50))
@@ -384,29 +385,106 @@ object HoliSwatchSampleFactory {
     fun getSampleGradientList(): MutableList<List<Pair<String, Brush>>> {
         val finalList = mutableListOf<List<Pair<String, Brush>>>()
 
-        val topList = mutableListOf<Pair<String,Brush>>()
-        topList.add(Pair("Top left to bottom right",GradientMixer.mixTopLeftToBottomRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        topList.add(Pair("Top to bottom",GradientMixer.mixTopToBottom(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        topList.add(Pair("Top right to bottom left",GradientMixer.mixTopRightToBottomLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        val topList = mutableListOf<Pair<String, Brush>>()
+        topList.add(
+            Pair(
+                "Top left to bottom right",
+                GradientMixer.mixTopLeftToBottomRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        topList.add(
+            Pair(
+                "Top to bottom",
+                GradientMixer.mixTopToBottom(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        topList.add(
+            Pair(
+                "Top right to bottom left",
+                GradientMixer.mixTopRightToBottomLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
         finalList.add(topList)
 
-        val midList = mutableListOf<Pair<String,Brush>>()
-        midList.add(Pair("Left to right",GradientMixer.mixLeftToRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        midList.add(Pair("Radial",GradientMixer.mixRadial(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        midList.add(Pair("Right to Left",GradientMixer.mixRightToLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        val midList = mutableListOf<Pair<String, Brush>>()
+        midList.add(
+            Pair(
+                "Left to right",
+                GradientMixer.mixLeftToRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        midList.add(
+            Pair(
+                "Radial",
+                GradientMixer.mixRadial(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        midList.add(
+            Pair(
+                "Right to Left",
+                GradientMixer.mixRightToLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
         finalList.add(midList)
 
-        val bottomList = mutableListOf<Pair<String,Brush>>()
-        bottomList.add(Pair("Bottom left to top right",GradientMixer.mixBottomLeftToTopRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        bottomList.add(Pair("Bottom to top",GradientMixer.mixBottomToTop(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        bottomList.add(Pair("Bottom right to top left",GradientMixer.mixBottomRightToTopLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        val bottomList = mutableListOf<Pair<String, Brush>>()
+        bottomList.add(
+            Pair(
+                "Bottom left to top right",
+                GradientMixer.mixBottomLeftToTopRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        bottomList.add(
+            Pair(
+                "Bottom to top",
+                GradientMixer.mixBottomToTop(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        bottomList.add(
+            Pair(
+                "Bottom right to top left",
+                GradientMixer.mixBottomRightToTopLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
         finalList.add(bottomList)
 
-        val miscList = mutableListOf<Pair<String,Brush>>()
-        miscList.add(Pair("Sweep Blend",GradientMixer.mixSweepBlend(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        miscList.add(Pair("Just vertical",GradientMixer.mixVertical(MaterialColor.YELLOW,MaterialColor.PURPLE)))
-        miscList.add(Pair("Just Horizontal",GradientMixer.mixHorizontal(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        val miscList = mutableListOf<Pair<String, Brush>>()
+        miscList.add(
+            Pair(
+                "Sweep Blend",
+                GradientMixer.mixSweepBlend(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        miscList.add(
+            Pair(
+                "Just vertical",
+                GradientMixer.mixVertical(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        miscList.add(
+            Pair(
+                "Just Horizontal",
+                GradientMixer.mixHorizontal(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
         finalList.add(miscList)
+
+        return finalList
+    }
+
+    fun getSampleDraculaColors(): MutableList<Pair<String, Color>> {
+        val finalList = mutableListOf<Pair<String, Color>>()
+
+        finalList.add(Pair("Dracula Pink", DraculaColor.PINK))
+        finalList.add(Pair("Dracula Purple", DraculaColor.PURPLE))
+        finalList.add(Pair("Dracula Orange", DraculaColor.ORANGE))
+        finalList.add(Pair("Dracula Yellow", DraculaColor.YELLOW))
+        finalList.add(Pair("Dracula Green", DraculaColor.GREEN))
+        finalList.add(Pair("Dracula Red", DraculaColor.RED))
+        finalList.add(Pair("Dracula Cyan", DraculaColor.CYAN))
+        finalList.add(Pair("Dracula Subtext", DraculaColor.SUBTEXT))
+        finalList.add(Pair("Dracula text", DraculaColor.TEXT))
+        finalList.add(Pair("Dracula bg dim", DraculaColor.BGDIM))
 
         return finalList
     }

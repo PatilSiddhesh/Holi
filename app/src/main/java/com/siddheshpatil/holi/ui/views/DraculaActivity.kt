@@ -23,19 +23,31 @@
  *
  */
 
-package com.siddheshpatil.holi
+package com.siddheshpatil.holi.ui.views
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
-import com.siddheshpatil.holi.ui.composables.HoliLazyBrushColumn
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
+import com.siddheshpatil.holi.colors.DraculaColor
+import com.siddheshpatil.holi.ui.composables.HoliLazyColorColumn
 
-class GradientMixerActivity : AppCompatActivity() {
+class DraculaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
-            HoliLazyBrushColumn(content = HoliSwatchSampleFactory.getSampleGradientList())
+            BoxWithConstraints(modifier = Modifier
+                .fillMaxSize()
+                .background(color = DraculaColor.BG)) {
+
+                HoliLazyColorColumn(HoliSampleColorFactory.getSampleDraculaColors())
+
+            }
         }
     }
 }
