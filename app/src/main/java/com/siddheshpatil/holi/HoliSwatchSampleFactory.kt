@@ -25,7 +25,9 @@
 
 package com.siddheshpatil.holi
 
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import com.siddheshpatil.holi.brushes.GradientMixer
 import com.siddheshpatil.holi.colors.MaterialColor
 
 /**
@@ -375,6 +377,36 @@ object HoliSwatchSampleFactory {
         blueGreyList.add(Pair("BLUE GREY 800", MaterialColor.BLUE_GREY_800))
         blueGreyList.add(Pair("BLUE GREY 900", MaterialColor.BLUE_GREY_900))
         finalList.add(blueGreyList)
+
+        return finalList
+    }
+
+    fun getSampleGradientList(): MutableList<List<Pair<String, Brush>>> {
+        val finalList = mutableListOf<List<Pair<String, Brush>>>()
+
+        val topList = mutableListOf<Pair<String,Brush>>()
+        topList.add(Pair("Top left to bottom right",GradientMixer.mixTopLeftToBottomRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        topList.add(Pair("Top to bottom",GradientMixer.mixTopToBottom(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        topList.add(Pair("Top right to bottom left",GradientMixer.mixTopRightToBottomLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        finalList.add(topList)
+
+        val midList = mutableListOf<Pair<String,Brush>>()
+        midList.add(Pair("Left to right",GradientMixer.mixLeftToRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        midList.add(Pair("Radial",GradientMixer.mixRadial(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        midList.add(Pair("Right to Left",GradientMixer.mixRightToLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        finalList.add(midList)
+
+        val bottomList = mutableListOf<Pair<String,Brush>>()
+        bottomList.add(Pair("Bottom left to top right",GradientMixer.mixBottomLeftToTopRight(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        bottomList.add(Pair("Bottom to top",GradientMixer.mixBottomToTop(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        bottomList.add(Pair("Bottom right to top left",GradientMixer.mixBottomRightToTopLeft(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        finalList.add(bottomList)
+
+        val miscList = mutableListOf<Pair<String,Brush>>()
+        miscList.add(Pair("Sweep Blend",GradientMixer.mixSweepBlend(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        miscList.add(Pair("Just vertical",GradientMixer.mixVertical(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        miscList.add(Pair("Just Horizontal",GradientMixer.mixHorizontal(MaterialColor.YELLOW,MaterialColor.PURPLE)))
+        finalList.add(miscList)
 
         return finalList
     }
