@@ -554,9 +554,73 @@ object HoliSampleColorFactory {
         )
         finalList.add(miscList)
 
+        val topList2 = mutableListOf<Pair<String, Brush>>()
+        topList2.add(
+            Pair(
+                "Reversed Top left to bottom right",
+                GradientMixer.topLeftToBottomRight(colorConfig,true)
+            )
+        )
+        topList2.add(
+            Pair(
+                "Reversed Top to bottom",
+                GradientMixer.topToBottom(colorConfig,true)
+            )
+        )
+        topList2.add(
+            Pair(
+                "Reversed Top right to bottom left",
+                GradientMixer.topRightToBottomLeft(colorConfig,true)
+            )
+        )
+        finalList.add(topList2)
+
+        val midList2 = mutableListOf<Pair<String, Brush>>()
+        midList2.add(
+            Pair(
+                "Reversed Left to right",
+                GradientMixer.leftToRight(colorConfig,true)
+            )
+        )
+        midList2.add(
+            Pair(
+                "Reversed Radial",
+                GradientMixer.radial(colorConfig,true)
+            )
+        )
+        midList2.add(
+            Pair(
+                "Reversed Right to Left",
+                GradientMixer.rightToLeft(colorConfig,true)
+            )
+        )
+        finalList.add(midList2)
+
+        val bottomList2 = mutableListOf<Pair<String, Brush>>()
+        bottomList2.add(
+            Pair(
+                "Reversed Bottom left to top right",
+                GradientMixer.bottomLeftToTopRight(colorConfig,true)
+            )
+        )
+        bottomList2.add(
+            Pair(
+                "Reversed Bottom to top",
+                GradientMixer.bottomToTop(colorConfig,true)
+            )
+        )
+        bottomList2.add(
+            Pair(
+                "Reversed Bottom right to top left",
+                GradientMixer.bottomRightToTopLeft(colorConfig,true)
+            )
+        )
+        finalList.add(bottomList2)
+
+
         return finalList
     }
-
+    
     fun getSampleDraculaColors(): MutableList<Pair<String, Color>> {
         val finalList = mutableListOf<Pair<String, Color>>()
 

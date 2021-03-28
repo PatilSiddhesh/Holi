@@ -28,19 +28,36 @@ package com.siddheshpatil.holi.ui.views
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.unit.dp
+import com.siddheshpatil.holi.colors.MaterialColor
 import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
 import com.siddheshpatil.holi.ui.composables.HoliLazyBrushColumn
 
 class GradientMixerMultiColorActivity : AppCompatActivity() {
+    @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
-        setContent { 
-            BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-                HoliLazyBrushColumn(content = HoliSampleColorFactory.getSampleGradientMultiColorList())                
+
+        setContent {
+            Box(modifier = Modifier.fillMaxSize()) {
+                HoliLazyBrushColumn(content = HoliSampleColorFactory.getSampleGradientMultiColorList())
             }
         }
     }
