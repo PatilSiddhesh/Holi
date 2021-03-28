@@ -37,3 +37,30 @@ Eg.
 ```
 
 ![](https://media.giphy.com/media/CTRkESw2qqbuBLgR86/giphy.gif)
+
+
+
+### Using Gradients
+
+Using gradients is super easy with Holi, just use GradientMixer and choose from various gradient brush generating functions.
+
+Eg.
+```kotlin
+   GradientMixer.sweepBlend(MaterialColor.RED,MaterialColor.GREEN)
+```
+
+Pass a list of colors for multi color mixing, every function can either take two colors of a list of colors
+```kotlin
+   GradientMixer.topRightToBottomLeft(
+    listOf(MaterialColor.RED,
+    MaterialColor.GREEN,
+    MaterialColor.PURPLE)
+    )
+```
+
+Set reversed to true in params to simply reverse any gradient
+```kotlin
+   GradientMixer.rightToLeft(FlatColor.CARROT,FlatColor.POMEGRANATE,reversed = true)
+```
+
+![](https://media.giphy.com/media/W5pC7NKZVsKcu7bEh8/giphy.gif)
