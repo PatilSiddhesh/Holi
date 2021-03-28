@@ -49,7 +49,7 @@ Eg.
    GradientMixer.sweepBlend(MaterialColor.RED,MaterialColor.GREEN)
 ```
 
-Pass a list of colors for multi color mixing, every function can either take two colors of a list of colors
+Pass a list of colors for multi color mixing, every function can either take two colors or a list of colors
 ```kotlin
    GradientMixer.topRightToBottomLeft(
     listOf(MaterialColor.RED,
