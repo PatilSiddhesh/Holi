@@ -5,7 +5,7 @@ plugins {
 
 }
 
-def holiVersionName = "0.0.1"
+def holiVersionName = "0.0.2"
 def holiArtifactId = "holi"
 def holiGroupId = "com.siddroid"
 
