@@ -32,20 +32,20 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
-import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
+import com.siddheshpatil.holi.colors.CoolColor
 import com.siddheshpatil.holi.colors.DraculaColor
+import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
 import com.siddheshpatil.holi.ui.composables.HoliLazyColorColumn
-import com.siddheshpatil.holi.ui.composables.HoliLazyColorRow
 
-class DraculaActivity : AppCompatActivity() {
+class CoolColorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContent {
             BoxWithConstraints(modifier = Modifier
                 .fillMaxSize()
-                .background(color = DraculaColor.BG)) {
-                HoliLazyColorColumn(HoliSampleColorFactory.getSampleDraculaColors())
+                .background(color = CoolColor.WHITE)) {
+                HoliLazyColorColumn(HoliSampleColorFactory.getSampleCoolColors())
 
             }
         }

@@ -93,7 +93,7 @@ object CoolColor {
     val LIGHT_GOLDEN_ROD_YELLOW = Color(0xffFAFAD2)
     val PAPAYA_WHIP = Color(0xffFFEFD5)
     val MOCCASIN = Color(0xffFFE4B5)
-    val PEACHPUFF = Color(0xffFFDAB9)
+    val PEACH_PUFF = Color(0xffFFDAB9)
     val PALE_GOLDEN_ROD = Color(0xffEEE8AA)
     val KHAKI = Color(0xffF0E68C)
     val DARK_KHAKI = Color(0xffBDB76B)

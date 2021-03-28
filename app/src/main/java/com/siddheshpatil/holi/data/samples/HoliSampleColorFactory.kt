@@ -28,6 +28,7 @@ package com.siddheshpatil.holi.data.samples
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import com.siddheshpatil.holi.brushes.GradientMixer
+import com.siddheshpatil.holi.colors.CoolColor
 import com.siddheshpatil.holi.colors.DraculaColor
 import com.siddheshpatil.holi.colors.MaterialColor
 
@@ -621,19 +622,227 @@ object HoliSampleColorFactory {
         return finalList
     }
     
-    fun getSampleDraculaColors(): MutableList<Pair<String, Color>> {
-        val finalList = mutableListOf<Pair<String, Color>>()
+    fun getSampleDraculaColors(): MutableList<List<Pair<String, Color>>> {
+        val finalList = mutableListOf<List<Pair<String, Color>>>()
 
-        finalList.add(Pair("Dracula Pink", DraculaColor.PINK))
-        finalList.add(Pair("Dracula Purple", DraculaColor.PURPLE))
-        finalList.add(Pair("Dracula Orange", DraculaColor.ORANGE))
-        finalList.add(Pair("Dracula Yellow", DraculaColor.YELLOW))
-        finalList.add(Pair("Dracula Green", DraculaColor.GREEN))
-        finalList.add(Pair("Dracula Red", DraculaColor.RED))
-        finalList.add(Pair("Dracula Cyan", DraculaColor.CYAN))
-        finalList.add(Pair("Dracula Subtext", DraculaColor.SUBTEXT))
-        finalList.add(Pair("Dracula text", DraculaColor.TEXT))
-        finalList.add(Pair("Dracula bg dim", DraculaColor.BGDIM))
+        val listFirst = mutableListOf<Pair<String, Color>>()
+        listFirst.add(Pair("Dracula Pink", DraculaColor.PINK))
+        listFirst.add(Pair("Dracula Purple", DraculaColor.PURPLE))
+        listFirst.add(Pair("Dracula Orange", DraculaColor.ORANGE))
+        finalList.add(listFirst)
+
+        val listSecond = mutableListOf<Pair<String, Color>>()
+        listSecond.add(Pair("Dracula Yellow", DraculaColor.YELLOW))
+        listSecond.add(Pair("Dracula Green", DraculaColor.GREEN))
+        listSecond.add(Pair("Dracula Red", DraculaColor.RED))
+        finalList.add(listSecond)
+
+        val listThird = mutableListOf<Pair<String, Color>>()
+        listThird.add(Pair("Dracula Cyan", DraculaColor.CYAN))
+        listThird.add(Pair("Dracula Subtext", DraculaColor.SUBTEXT))
+        listThird.add(Pair("Dracula text", DraculaColor.TEXT))
+        finalList.add(listThird)
+        
+
+        return finalList
+    }
+
+    fun getSampleCoolColors(): MutableList<List<Pair<String, Color>>> {
+        val finalList = mutableListOf<List<Pair<String, Color>>>()
+
+        val listFirst = mutableListOf<Pair<String, Color>>()
+        listFirst.add(Pair("GAINSBORO", CoolColor.GAINSBORO))
+        listFirst.add(Pair("LIGHT GREY", CoolColor.LIGHT_GREY))
+        listFirst.add(Pair("SILVER", CoolColor.SILVER))
+        listFirst.add(Pair("LAWN GREEN", CoolColor.LAWN_GREEN))
+        listFirst.add(Pair("LIME", CoolColor.LIME))
+        listFirst.add(Pair("LIME GREEN", CoolColor.LIME_GREEN))
+        finalList.add(listFirst)
+
+        val listSecond = mutableListOf<Pair<String, Color>>()
+        listSecond.add(Pair("DARK GREY", CoolColor.DARK_GREY))
+        listSecond.add(Pair("GREY", CoolColor.GREY))
+        listSecond.add(Pair("DIM GREY", CoolColor.DIM_GREY))
+        listSecond.add(Pair("DARK OLIVE", CoolColor.DARK_OLIVE))
+        listSecond.add(Pair("MEDIUM AQUAMARINE", CoolColor.MEDIUM_AQUAMARINE))
+        listSecond.add(Pair("DARK SEAGREEEN", CoolColor.DARK_SEAGREEN))
+        finalList.add(listSecond)
+
+        val listThird = mutableListOf<Pair<String, Color>>()
+        listThird.add(Pair("LIGHT SLATE GREY", CoolColor.LIGHT_SLATE_GREY))
+        listThird.add(Pair("SLATE GREY", CoolColor.SLATE_GREY))
+        listThird.add(Pair("DARK SLATE GREY", CoolColor.DARK_SLATE_GREY))
+        listThird.add(Pair("LIGHT SEAGREEN", CoolColor.LIGHT_SEAGREEN))
+        listThird.add(Pair("DARK CYAN", CoolColor.DARK_CYAN))
+        listThird.add(Pair("TEAL", CoolColor.TEAL))
+        finalList.add(listThird)
+
+        val listFourth = mutableListOf<Pair<String, Color>>()
+        listFourth.add(Pair("BLACK", CoolColor.BLACK))
+        listFourth.add(Pair("CORN SILK", CoolColor.CORN_SILK))
+        listFourth.add(Pair("BLANCHED ALMOND", CoolColor.BLANCHED_ALMOND))
+        listFourth.add(Pair("LAVENDER", CoolColor.LAVENDER))
+        listFourth.add(Pair("THISTLE", CoolColor.THISTLE))
+        listFourth.add(Pair("PLUM", CoolColor.PLUM))
+        finalList.add(listFourth)
+
+        val listFifth = mutableListOf<Pair<String, Color>>()
+        listFifth.add(Pair("BISQUE", CoolColor.BISQUE))
+        listFifth.add(Pair("NAVAJO WHITE", CoolColor.NAVAJO_WHITE))
+        listFifth.add(Pair("WHEAT", CoolColor.WHEAT))
+        listFifth.add(Pair("VIOLET", CoolColor.VIOLET))
+        listFifth.add(Pair("ORCHID", CoolColor.ORCHID))
+        listFifth.add(Pair("FUCHSIA", CoolColor.FUCHSIA))
+        finalList.add(listFifth)
+
+        val listSixth = mutableListOf<Pair<String, Color>>()
+        listSixth.add(Pair("BURLYWOOD", CoolColor.BURLYWOOD))
+        listSixth.add(Pair("TAN", CoolColor.TAN))
+        listSixth.add(Pair("ROSY BROWN", CoolColor.ROSY_BROWN))
+        listSixth.add(Pair("MAGENTA", CoolColor.MAGENTA))
+        listSixth.add(Pair("MEDIUM ORCHID", CoolColor.MEDIUM_ORCHID))
+        listSixth.add(Pair("MEDIUM PURPLE", CoolColor.MEDIUM_PURPLE))
+        finalList.add(listSixth)
+
+        val listSeventh = mutableListOf<Pair<String, Color>>()
+        listSeventh.add(Pair("SANDY BROWN", CoolColor.SANDY_BROWN))
+        listSeventh.add(Pair("GOLDEN ROD", CoolColor.GOLDEN_ROD))
+        listSeventh.add(Pair("DARK GOLDEN ROD", CoolColor.DARK_GOLDEN_ROD))
+        listSeventh.add(Pair("REBECCA PURPLE", CoolColor.REBECCA_PURPLE))
+        listSeventh.add(Pair("BLUE VIOLET", CoolColor.BLUE_VIOLET))
+        listSeventh.add(Pair("DARK VIOLET", CoolColor.DARK_VIOLET))
+        finalList.add(listSeventh)
+
+        val listEighth = mutableListOf<Pair<String, Color>>()
+        listEighth.add(Pair("PERU", CoolColor.PERU))
+        listEighth.add(Pair("CHOCOLATE", CoolColor.CHOCOLATE))
+        listEighth.add(Pair("SADDLE BROWN", CoolColor.SADDLE_BROWN))
+        listEighth.add(Pair("DARK ORCHID", CoolColor.DARK_ORCHID))
+        listEighth.add(Pair("DARK MAGENTA", CoolColor.DARK_MAGENTA))
+        listEighth.add(Pair("PURPLE", CoolColor.PURPLE))
+        finalList.add(listEighth)
+
+        val listNineth = mutableListOf<Pair<String, Color>>()
+        listNineth.add(Pair("SIENNA", CoolColor.SIENNA))
+        listNineth.add(Pair("BROWN", CoolColor.BROWN))
+        listNineth.add(Pair("MAROON", CoolColor.MAROON))
+        listNineth.add(Pair("INDIGO", CoolColor.INDIGO))
+        listNineth.add(Pair("SLATE BLUE", CoolColor.SLATE_BLUE))
+        listNineth.add(Pair("DARK SLATE BLUE", CoolColor.DARK_SLATE_BLUE))
+        finalList.add(listNineth)
+
+        val listTenth = mutableListOf<Pair<String, Color>>()
+        listTenth.add(Pair("INDIAN RED", CoolColor.INDIAN_RED))
+        listTenth.add(Pair("LIGHT CORAL", CoolColor.LIGHT_CORAL))
+        listTenth.add(Pair("SALMON", CoolColor.SALMON))
+        listTenth.add(Pair("MEDIUM SLATE BLUE", CoolColor.MEDIUM_SLATE_BLUE))
+        listTenth.add(Pair("AQUAL", CoolColor.AQUA))
+        listTenth.add(Pair("CYAN", CoolColor.CYAN))
+        finalList.add(listTenth)
+
+        val listEleventh = mutableListOf<Pair<String, Color>>()
+        listEleventh.add(Pair("DARK SALMON", CoolColor.DARK_SALMON))
+        listEleventh.add(Pair("LIGHT SALMON", CoolColor.LIGHT_SALMON))
+        listEleventh.add(Pair("CRIMSON", CoolColor.CRIMSON))
+        listEleventh.add(Pair("LIGHT CYAN", CoolColor.LIGHT_CYAN))
+        listEleventh.add(Pair("PALE TURQUOISE", CoolColor.PALE_TURQUOISE))
+        listEleventh.add(Pair("AQUAMARINE", CoolColor.AQUAMARINE))
+        finalList.add(listEleventh)
+
+        val listTwelve = mutableListOf<Pair<String, Color>>()
+        listTwelve.add(Pair("RED", CoolColor.RED))
+        listTwelve.add(Pair("FIREBRICK", CoolColor.FIREBRICK))
+        listTwelve.add(Pair("DARK RED", CoolColor.DARK_RED))
+        listTwelve.add(Pair("TURQUOISE", CoolColor.TURQUOISE))
+        listTwelve.add(Pair("MEDIUM TURQUOISE", CoolColor.MEDIUM_TURQUOISE))
+        listTwelve.add(Pair("DARK TURQUOISE", CoolColor.DARK_TURQUOISE))
+        finalList.add(listTwelve)
+
+        val listThirteen = mutableListOf<Pair<String, Color>>()
+        listThirteen.add(Pair("PINK", CoolColor.PINK))
+        listThirteen.add(Pair("LIGHT PINK", CoolColor.LIGHT_PINK))
+        listThirteen.add(Pair("HOT PINK", CoolColor.HOT_PINK))
+        listThirteen.add(Pair("CADET BLUE", CoolColor.CADET_BLUE))
+        listThirteen.add(Pair("STEEL BLUE", CoolColor.STEEL_BLUE))
+        listThirteen.add(Pair("LIGHT STEEL", CoolColor.LIGHT_STEEL))
+        finalList.add(listThirteen)
+
+        val listFourteen = mutableListOf<Pair<String, Color>>()
+        listFourteen.add(Pair("DEEP PINK", CoolColor.DEEP_PINK))
+        listFourteen.add(Pair("MEDIUM VIOLET RED", CoolColor.MEDIUM_VIOLET_RED))
+        listFourteen.add(Pair("PALE VIOLET RED", CoolColor.PALE_VIOLET_RED))
+        listFourteen.add(Pair("POWDER BLUE", CoolColor.POWDER_BLUE))
+        listFourteen.add(Pair("LIGHT BLUE", CoolColor.LIGHT_BLUE))
+        listFourteen.add(Pair("SKY BLUE", CoolColor.SKY_BLUE))
+        finalList.add(listFourteen)
+
+        val listFifteen = mutableListOf<Pair<String, Color>>()
+        listFifteen.add(Pair("CORAL", CoolColor.CORAL))
+        listFifteen.add(Pair("TOMATO", CoolColor.TOMATO))
+        listFifteen.add(Pair("ORANGE RED", CoolColor.ORANGE_RED))
+        listFifteen.add(Pair("LIGHT SKY", CoolColor.LIGHT_SKY))
+        listFifteen.add(Pair("DEEP SKY BLUE", CoolColor.DEEP_SKY_BLUE))
+        listFifteen.add(Pair("DODGER BLUE", CoolColor.DODGER_BLUE))
+        finalList.add(listFifteen)
+
+        val listSixteen = mutableListOf<Pair<String, Color>>()
+        listSixteen.add(Pair("DARK ORANGE", CoolColor.DARK_ORANGE))
+        listSixteen.add(Pair("ORANGE", CoolColor.ORANGE))
+        listSixteen.add(Pair("GOLD", CoolColor.GOLD))
+        listSixteen.add(Pair("CORNFLOWER BLUE", CoolColor.CORNFLOWER_BLUE))
+        listSixteen.add(Pair("ROYAL BLUE", CoolColor.ROYAL_BLUE))
+        listSixteen.add(Pair("BLUE", CoolColor.BLUE))
+        finalList.add(listSixteen)
+
+        val listSeventeen = mutableListOf<Pair<String, Color>>()
+        listSeventeen.add(Pair("YELLOW", CoolColor.YELLOW))
+        listSeventeen.add(Pair("LIGHT YELLOW", CoolColor.LIGHT_YELLOW))
+        listSeventeen.add(Pair("LEMON CHIFFON", CoolColor.LEMON_CHIFFON))
+        listSeventeen.add(Pair("MEDIUM BLUE", CoolColor.MEDIUM_BLUE))
+        listSeventeen.add(Pair("DARK BLUE", CoolColor.DARK_BLUE))
+        listSeventeen.add(Pair("NAVY", CoolColor.NAVY))
+        finalList.add(listSeventeen)
+
+        val listEighteen = mutableListOf<Pair<String, Color>>()
+        listEighteen.add(Pair("LIGHT GOLDEN ROD YELLOW", CoolColor.LIGHT_GOLDEN_ROD_YELLOW))
+        listEighteen.add(Pair("PAPAYA WHIP", CoolColor.PAPAYA_WHIP))
+        listEighteen.add(Pair("MOCCASIN", CoolColor.MOCCASIN))
+        listEighteen.add(Pair("MIDNIGHT BLUE", CoolColor.MIDNIGHT_BLUE))
+        listEighteen.add(Pair("SNOW", CoolColor.SNOW))
+        listEighteen.add(Pair("HONEY DEW", CoolColor.HONEY_DEW))
+        finalList.add(listEighteen)
+
+        val listNineteen = mutableListOf<Pair<String, Color>>()
+        listNineteen.add(Pair("PEACH PUFF", CoolColor.PEACH_PUFF))
+        listNineteen.add(Pair("PALE GOLDEN ROD", CoolColor.PALE_GOLDEN_ROD))
+        listNineteen.add(Pair("KHAKI", CoolColor.KHAKI))
+        listNineteen.add(Pair("MINT CREAM", CoolColor.MINT_CREAM))
+        listNineteen.add(Pair("AZURE", CoolColor.AZURE))
+        listNineteen.add(Pair("ALICE BLUE", CoolColor.ALICE_BLUE))
+        finalList.add(listNineteen)
+
+        val listTwenty = mutableListOf<Pair<String, Color>>()
+        listTwenty.add(Pair("DARK KHAKI", CoolColor.DARK_KHAKI))
+        listTwenty.add(Pair("GREEN YELLOW", CoolColor.GREEN_YELLOW))
+        listTwenty.add(Pair("CHARTREUSE", CoolColor.CHARTREUSE))
+        listTwenty.add(Pair("GHOST WHITE", CoolColor.GHOST_WHITE))
+        listTwenty.add(Pair("WHITE SMOKE", CoolColor.WHITE_SMOKE))
+        listTwenty.add(Pair("SEASHELL", CoolColor.SEASHELL))
+        finalList.add(listTwenty)
+
+        val listTwentyOne = mutableListOf<Pair<String, Color>>()
+        listTwentyOne.add(Pair("BEIGE", CoolColor.BEIGE))
+        listTwentyOne.add(Pair("OLDLACE", CoolColor.OLDLACE))
+        listTwentyOne.add(Pair("FLORAL WHITE", CoolColor.FLORAL_WHITE))
+        listTwentyOne.add(Pair("IVORY", CoolColor.IVORY))
+        listTwentyOne.add(Pair("ANTIQUE WHITE", CoolColor.ANTIQUE_WHITE))
+        listTwentyOne.add(Pair("LINEN", CoolColor.LINEN))
+        listTwentyOne.add(Pair("LAVENDER BRISH", CoolColor.LAVENDER_BRUSH))
+        listTwentyOne.add(Pair("MISTY ROSE", CoolColor.MISTY_ROSE))
+        finalList.add(listTwentyOne)
+        
+        
+
 
         return finalList
     }

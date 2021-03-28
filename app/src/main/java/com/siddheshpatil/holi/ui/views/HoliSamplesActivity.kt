@@ -75,6 +75,16 @@ class HoliSamplesActivity : ComponentActivity() {
                     }
                     Button(
                         modifier = Modifier.padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.TEAL),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, CoolColorActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Cool Colors", fontSize = 16.sp, color = Color.White)
+                    }
+                    Button(
+                        modifier = Modifier.padding(10.dp),
                         colors = ButtonDefaults.buttonColors(backgroundColor = DraculaColor.BG),
                         onClick = {
                             val intent =
