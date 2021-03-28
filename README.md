@@ -29,12 +29,11 @@ Directional Gradients      |  Directional multi color gradients
 You can simply pick colors by using the container objects for each palette and profit.
 
 Eg.
-```
+```kotlin
    MaterialColor.RED
    CoolColor.FIREBRICK
    FlatColor.EMERLAND
    DraculaColor.YELLOW
-   
 ```
 
 ![](https://media.giphy.com/media/CTRkESw2qqbuBLgR86/giphy.gif)
