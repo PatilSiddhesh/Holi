@@ -5,26 +5,18 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import com.siddheshpatil.holi.colors.MaterialColor
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = MaterialColor.RED_200,
+    primaryVariant = MaterialColor.RED_700,
+    secondary = MaterialColor.YELLOW_200
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = MaterialColor.RED_500,
+    primaryVariant = MaterialColor.RED_700,
+    secondary = MaterialColor.YELLOW_200
 )
 
 @Composable
@@ -37,8 +29,6 @@ fun HoliTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable()
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
-        shapes = Shapes,
         content = content
     )
 }

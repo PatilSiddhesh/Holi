@@ -54,18 +54,18 @@ import androidx.compose.ui.unit.sp
 // ***************************** COLOR SAMPLES ********************************* //
 
 @Composable
-fun HoliLazyColorRow(content: List<List<Pair<String, Color>>>) {
-    LazyRow(modifier = Modifier.fillMaxSize()) {
+fun HoliLazyColorColumn(content: List<List<Pair<String, Color>>>) {
+    LazyColumn(modifier = Modifier.fillMaxSize()) {
         itemsIndexed(content) { index, item ->
-            HoliLazyColorColumn(colorList = item)
+            HoliLazyColorRow(colorList = item)
         }
 
     }
 }
 
 @Composable
-fun HoliLazyColorColumn(colorList: List<Pair<String, Color>>) {
-    LazyColumn(
+fun HoliLazyColorRow(colorList: List<Pair<String, Color>>) {
+    LazyRow(
         modifier = Modifier
             .fillMaxSize()
     ) {

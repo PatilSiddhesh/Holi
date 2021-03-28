@@ -40,49 +40,54 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.siddheshpatil.holi.colors.DraculaColor
 import com.siddheshpatil.holi.colors.MaterialColor
+import com.siddheshpatil.holi.ui.theme.HoliTheme
 
 class HoliSamplesActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(20.dp),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            )
-            {
+            HoliTheme {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(20.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                )
+                {
 
-                Button(
-                    modifier = Modifier.padding(10.dp),
-                    colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.TEAL),
-                    onClick = {
-                        val intent = Intent(this@HoliSamplesActivity, MaterialColorsActivity::class.java)
-                        startActivity(intent)
-                    }) {
-                    Text(text = "Material Colors", fontSize = 16.sp, color = Color.White)
-                }
-                Button(
-                    modifier = Modifier.padding(10.dp),
-                    colors = ButtonDefaults.buttonColors(backgroundColor = DraculaColor.BG),
-                    onClick = {
-                        val intent = Intent(this@HoliSamplesActivity, DraculaActivity::class.java)
-                        startActivity(intent)
-                    }) {
-                    Text(text = "Dracula Colors", fontSize = 16.sp, color = DraculaColor.PINK)
-                }
-                Button(
-                    modifier = Modifier.padding(10.dp),
-                    onClick = {
-                        val intent = Intent(this@HoliSamplesActivity, GradientMixerActivity::class.java)
-                        startActivity(intent)
-                    }) {
-                    Text(text = "Gradient Utils", fontSize = 16.sp, color = Color.White)
+                    Button(
+                        modifier = Modifier.padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.TEAL),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, MaterialColorsActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Material Colors", fontSize = 16.sp, color = Color.White)
+                    }
+                    Button(
+                        modifier = Modifier.padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = DraculaColor.BG),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, DraculaActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Dracula Colors", fontSize = 16.sp, color = DraculaColor.PINK)
+                    }
+                    Button(
+                        modifier = Modifier.padding(10.dp),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, GradientMixerActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Gradient Utils", fontSize = 16.sp, color = Color.White)
+                    }
                 }
             }
-
         }
     }
 }

@@ -23,20 +23,37 @@
  *
  */
 
-package com.siddheshpatil.holi.ui.views
+package com.siddheshpatil.holi.colors
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.activity.compose.setContent
-import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
-import com.siddheshpatil.holi.ui.composables.HoliLazyColorColumn
+import androidx.compose.ui.graphics.Color
 
-class MaterialColorsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            HoliLazyColorColumn(content = HoliSampleColorFactory.getColorPaletteList())
-        }
-    }
+/**
+ *
+ * @author Siddhesh Patil
+ * Siddroid.com
+ * @since 28-03-2021
+ *
+ * Palette source : https://www.materialui.co/flatuicolors
+ */
+object FlatColor {
+    val TURQUOISE = Color(0xff1abc9c)
+    val EMERLAND = Color(0xff2ecc71)
+    val PETER_RIVER = Color(0xff3498db)
+    val AMETHYST = Color(0xff34495e)
+    val WET_ASPHALT = Color(0xffffb86c)
+    val GREENSEA = Color(0xff16a085)
+    val NEPHRITIS = Color(0xff27ae60)
+    val BELIZE_HOLE = Color(0xff2980b9)
+    val WISTERIA = Color(0xff8e44ad)
+    val MIDNIGHT_BLUE = Color(0xff2c3e50)
+    val SUNFLOWER = Color(0xfff1c40f)
+    val CARROT = Color(0xffe67e22)
+    val ALIZARIN = Color(0xffe74c3c)
+    val CLOUDS = Color(0xffecf0f1)
+    val CONCRETE = Color(0xff95a5a6)
+    val ORANGE = Color(0xfff39c12)
+    val PUMPKIN = Color(0xffd35400)
+    val POMEGRANATE = Color(0xffc0392b)
+    val SILVER = Color(0xffbdc3c7)
+    val ASBESTOS = Color(0xff7f8c8d)
 }

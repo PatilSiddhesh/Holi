@@ -34,7 +34,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import com.siddheshpatil.holi.data.samples.HoliSampleColorFactory
 import com.siddheshpatil.holi.colors.DraculaColor
-import com.siddheshpatil.holi.ui.composables.HoliLazyColorColumn
+import com.siddheshpatil.holi.ui.composables.HoliLazyColorRow
 
 class DraculaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +45,7 @@ class DraculaActivity : AppCompatActivity() {
                 .fillMaxSize()
                 .background(color = DraculaColor.BG)) {
 
-                HoliLazyColorColumn(HoliSampleColorFactory.getSampleDraculaColors())
+                HoliLazyColorRow(HoliSampleColorFactory.getSampleDraculaColors())
 
             }
         }
