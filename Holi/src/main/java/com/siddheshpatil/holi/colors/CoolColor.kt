@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Color
  * Siddroid.com
  * @since 28-03-2021
  *
+ * A collection of cool looking colors!
  * Palette source: https://www.materialui.co/htmlcolors
  *
  */

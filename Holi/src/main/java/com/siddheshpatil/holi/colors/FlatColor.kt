@@ -33,6 +33,8 @@ import androidx.compose.ui.graphics.Color
  * Siddroid.com
  * @since 28-03-2021
  *
+ * A collection of neat flat colors
+ *
  * Palette source : https://www.materialui.co/flatuicolors
  */
 object FlatColor {
