@@ -81,7 +81,7 @@ class HoliSamplesActivity : ComponentActivity() {
                         colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.PURPLE_300),
                         onClick = {
                             val intent =
-                                Intent(this@HoliSamplesActivity, CoolColorActivity::class.java)
+                                Intent(this@HoliSamplesActivity, FlatColorActivity::class.java)
                             startActivity(intent)
                         }) {
                         Text(text = "Flat Colors", fontSize = 16.sp, color = Color.White)
