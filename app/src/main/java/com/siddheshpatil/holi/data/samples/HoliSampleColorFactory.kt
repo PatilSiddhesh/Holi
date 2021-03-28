@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import com.siddheshpatil.holi.brushes.GradientMixer
 import com.siddheshpatil.holi.colors.CoolColor
 import com.siddheshpatil.holi.colors.DraculaColor
+import com.siddheshpatil.holi.colors.FlatColor
 import com.siddheshpatil.holi.colors.MaterialColor
 
 /**
@@ -643,6 +644,42 @@ object HoliSampleColorFactory {
         listThird.add(Pair("Dracula text", DraculaColor.TEXT))
         finalList.add(listThird)
         
+
+        return finalList
+    }
+
+    fun getSampleFlatColors(): MutableList<List<Pair<String, Color>>> {
+        val finalList = mutableListOf<List<Pair<String, Color>>>()
+
+        val listFirst = mutableListOf<Pair<String, Color>>()
+        listFirst.add(Pair("TURQUOISE", FlatColor.TURQUOISE))
+        listFirst.add(Pair("EMERLAND", FlatColor.EMERLAND))
+        listFirst.add(Pair("PETERRIVER", FlatColor.PETER_RIVER))
+        listFirst.add(Pair("MIDNIGHT BLUE", FlatColor.MIDNIGHT_BLUE))
+        listFirst.add(Pair("SUNFLOWER", FlatColor.SUNFLOWER))
+        listFirst.add(Pair("CARROT", FlatColor.CARROT))
+        finalList.add(listFirst)
+
+        val listSecond = mutableListOf<Pair<String, Color>>()
+        listSecond.add(Pair("AMETHYST", FlatColor.AMETHYST))
+        listSecond.add(Pair("WETASPHALT", FlatColor.WET_ASPHALT))
+        listSecond.add(Pair("GREENSEA", FlatColor.GREENSEA))
+        listSecond.add(Pair("ALIZARIN", FlatColor.ALIZARIN))
+        listSecond.add(Pair("CONCRETE", FlatColor.CONCRETE))
+        listSecond.add(Pair("CLOUDS", FlatColor.CLOUDS))
+        finalList.add(listSecond)
+
+        val listThird = mutableListOf<Pair<String, Color>>()
+        listThird.add(Pair("NEPHRITIS", FlatColor.NEPHRITIS))
+        listThird.add(Pair("BELIZEHOLE", FlatColor.BELIZE_HOLE))
+        listThird.add(Pair("WISTERIA", FlatColor.WISTERIA))
+        listThird.add(Pair("ORANGE", FlatColor.ORANGE))
+        listThird.add(Pair("PUMPKIN", FlatColor.PUMPKIN))
+        listThird.add(Pair("POMEGRANATE", FlatColor.POMEGRANATE))
+        listThird.add(Pair("SILVER", FlatColor.SILVER))
+        listThird.add(Pair("ASBESTOS", FlatColor.ASBESTOS))
+        finalList.add(listThird)
+
 
         return finalList
     }

@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import com.siddheshpatil.holi.brushes.GradientMixer
 import com.siddheshpatil.holi.colors.CoolColor
 import com.siddheshpatil.holi.colors.DraculaColor
+import com.siddheshpatil.holi.colors.FlatColor
 import com.siddheshpatil.holi.colors.MaterialColor
 import com.siddheshpatil.holi.ui.theme.HoliTheme
 
@@ -75,13 +76,23 @@ class HoliSamplesActivity : ComponentActivity() {
                     }
                     Button(
                         modifier = Modifier.padding(10.dp),
-                        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.TEAL),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.LIME_300),
                         onClick = {
                             val intent =
                                 Intent(this@HoliSamplesActivity, CoolColorActivity::class.java)
                             startActivity(intent)
                         }) {
-                        Text(text = "Cool Colors", fontSize = 16.sp, color = Color.White)
+                        Text(text = "Cool Colors", fontSize = 16.sp, color = Color.Black)
+                    }
+                    Button(
+                        modifier = Modifier.padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.PURPLE_300),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, CoolColorActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Flat Colors", fontSize = 16.sp, color = Color.White)
                     }
                     Button(
                         modifier = Modifier.padding(10.dp),
@@ -95,12 +106,13 @@ class HoliSamplesActivity : ComponentActivity() {
                     }
                     Button(
                         modifier = Modifier.padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = FlatColor.EMERLAND),
                         onClick = {
                             val intent =
                                 Intent(this@HoliSamplesActivity, GradientMixerActivity::class.java)
                             startActivity(intent)
                         }) {
-                        Text(text = "Gradient Utils", fontSize = 16.sp, color = Color.White)
+                        Text(text = "Gradient Utils", fontSize = 16.sp, color = Color.Black)
                     }
 
                     Button(
