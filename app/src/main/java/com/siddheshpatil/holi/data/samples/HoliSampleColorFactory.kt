@@ -389,19 +389,19 @@ object HoliSampleColorFactory {
         topList.add(
             Pair(
                 "Top left to bottom right",
-                GradientMixer.mixTopLeftToBottomRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.topLeftToBottomRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         topList.add(
             Pair(
                 "Top to bottom",
-                GradientMixer.mixTopToBottom(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.topToBottom(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         topList.add(
             Pair(
                 "Top right to bottom left",
-                GradientMixer.mixTopRightToBottomLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.topRightToBottomLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         finalList.add(topList)
@@ -410,19 +410,19 @@ object HoliSampleColorFactory {
         midList.add(
             Pair(
                 "Left to right",
-                GradientMixer.mixLeftToRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.leftToRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         midList.add(
             Pair(
                 "Radial",
-                GradientMixer.mixRadial(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.radial(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         midList.add(
             Pair(
                 "Right to Left",
-                GradientMixer.mixRightToLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.rightToLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         finalList.add(midList)
@@ -431,19 +431,19 @@ object HoliSampleColorFactory {
         bottomList.add(
             Pair(
                 "Bottom left to top right",
-                GradientMixer.mixBottomLeftToTopRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.bottomLeftToTopRight(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         bottomList.add(
             Pair(
                 "Bottom to top",
-                GradientMixer.mixBottomToTop(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.bottomToTop(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         bottomList.add(
             Pair(
                 "Bottom right to top left",
-                GradientMixer.mixBottomRightToTopLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.bottomRightToTopLeft(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         finalList.add(bottomList)
@@ -452,19 +452,104 @@ object HoliSampleColorFactory {
         miscList.add(
             Pair(
                 "Sweep Blend",
-                GradientMixer.mixSweepBlend(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.sweepBlend(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         miscList.add(
             Pair(
                 "Just vertical",
-                GradientMixer.mixVertical(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.vertical(MaterialColor.YELLOW, MaterialColor.PURPLE)
             )
         )
         miscList.add(
             Pair(
                 "Just Horizontal",
-                GradientMixer.mixHorizontal(MaterialColor.YELLOW, MaterialColor.PURPLE)
+                GradientMixer.horizontal(MaterialColor.YELLOW, MaterialColor.PURPLE)
+            )
+        )
+        finalList.add(miscList)
+
+        return finalList
+    }
+
+
+    fun getSampleGradientMultiColorList(): MutableList<List<Pair<String, Brush>>> {
+        val finalList = mutableListOf<List<Pair<String, Brush>>>()
+
+        val colorConfig = listOf(
+            MaterialColor.INDIGO,
+            MaterialColor.PINK,
+            MaterialColor.ORANGE,
+            MaterialColor.YELLOW
+        )
+        val topList = mutableListOf<Pair<String, Brush>>()
+        topList.add(
+            Pair(
+                "Top left to bottom right",
+                GradientMixer.topLeftToBottomRight(colorConfig)
+            )
+        )
+        topList.add(
+            Pair(
+                "Top to bottom",
+                GradientMixer.topToBottom(colorConfig)
+            )
+        )
+        topList.add(
+            Pair(
+                "Top right to bottom left",
+                GradientMixer.topRightToBottomLeft(colorConfig)
+            )
+        )
+        finalList.add(topList)
+
+        val midList = mutableListOf<Pair<String, Brush>>()
+        midList.add(
+            Pair(
+                "Left to right",
+                GradientMixer.leftToRight(colorConfig)
+            )
+        )
+        midList.add(
+            Pair(
+                "Radial",
+                GradientMixer.radial(colorConfig)
+            )
+        )
+        midList.add(
+            Pair(
+                "Right to Left",
+                GradientMixer.rightToLeft(colorConfig)
+            )
+        )
+        finalList.add(midList)
+
+        val bottomList = mutableListOf<Pair<String, Brush>>()
+        bottomList.add(
+            Pair(
+                "Bottom left to top right",
+                GradientMixer.bottomLeftToTopRight(colorConfig)
+            )
+        )
+        bottomList.add(
+            Pair(
+                "Bottom to top",
+                GradientMixer.bottomToTop(colorConfig)
+            )
+        )
+        bottomList.add(
+            Pair(
+                "Bottom right to top left",
+                GradientMixer.bottomRightToTopLeft(colorConfig)
+            )
+        )
+        finalList.add(bottomList)
+
+        val miscList = mutableListOf<Pair<String, Brush>>()
+        miscList.add(
+            Pair(
+                "Sweep Blend",
+                GradientMixer.sweepBlend(colorConfig)
             )
         )
         finalList.add(miscList)

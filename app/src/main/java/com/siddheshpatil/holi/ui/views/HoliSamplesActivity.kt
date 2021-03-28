@@ -27,17 +27,25 @@ package com.siddheshpatil.holi.ui.views
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.siddheshpatil.holi.brushes.GradientMixer
+import com.siddheshpatil.holi.colors.CoolColor
 import com.siddheshpatil.holi.colors.DraculaColor
 import com.siddheshpatil.holi.colors.MaterialColor
 import com.siddheshpatil.holi.ui.theme.HoliTheme
@@ -46,7 +54,6 @@ class HoliSamplesActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
             HoliTheme {
                 Column(
                     modifier = Modifier
@@ -56,7 +63,6 @@ class HoliSamplesActivity : ComponentActivity() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 )
                 {
-
                     Button(
                         modifier = Modifier.padding(10.dp),
                         colors = ButtonDefaults.buttonColors(backgroundColor = MaterialColor.TEAL),
@@ -85,6 +91,16 @@ class HoliSamplesActivity : ComponentActivity() {
                             startActivity(intent)
                         }) {
                         Text(text = "Gradient Utils", fontSize = 16.sp, color = Color.White)
+                    }
+
+                    Button(
+                        modifier = Modifier.padding(10.dp),
+                        onClick = {
+                            val intent =
+                                Intent(this@HoliSamplesActivity, GradientMixerMultiColorActivity::class.java)
+                            startActivity(intent)
+                        }) {
+                        Text(text = "Multi Color Gradient Utils", fontSize = 16.sp, color = Color.White)
                     }
                 }
             }

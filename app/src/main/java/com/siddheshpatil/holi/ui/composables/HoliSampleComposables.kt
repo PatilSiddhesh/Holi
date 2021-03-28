@@ -52,7 +52,10 @@ import androidx.compose.ui.unit.sp
 
 
 // ***************************** COLOR SAMPLES ********************************* //
-
+/**
+ * Builds a lazy column of scrollable lazy rows containing color swatches
+ * @param content list of lists containing pair of color and their names
+ */
 @Composable
 fun HoliLazyColorColumn(content: List<List<Pair<String, Color>>>) {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -63,6 +66,10 @@ fun HoliLazyColorColumn(content: List<List<Pair<String, Color>>>) {
     }
 }
 
+/**
+ * Builds a lazy color row for demo
+ * @param colorList list of pairs of color and their names
+ */
 @Composable
 fun HoliLazyColorRow(colorList: List<Pair<String, Color>>) {
     LazyRow(
@@ -77,6 +84,10 @@ fun HoliLazyColorRow(colorList: List<Pair<String, Color>>) {
     }
 }
 
+/**
+ * A color swatch for demo
+ * @param color a pair of color and its title
+ */
 @Composable
 fun ColorSwatch(color: Pair<String, Color>) {
     BoxWithConstraints(
@@ -92,6 +103,10 @@ fun ColorSwatch(color: Pair<String, Color>) {
 
 // ***************************** BRUSH SAMPLES ********************************* //
 
+/**
+ * Builds a lazy column of scrollable lazy rows containing brush swatches
+ * @param content list of lists containing pair of gradient and their names
+ */
 @Composable
 fun HoliLazyBrushColumn(content: List<List<Pair<String, Brush>>>) {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -102,6 +117,10 @@ fun HoliLazyBrushColumn(content: List<List<Pair<String, Brush>>>) {
     }
 }
 
+/**
+ * Builds a lazy brush row for demo
+ * @param brushList list of pairs of gradients and their names
+ */
 @Composable
 fun HoliLazyBrushRow(brushList: List<Pair<String, Brush>>) {
     LazyRow(
@@ -116,6 +135,10 @@ fun HoliLazyBrushRow(brushList: List<Pair<String, Brush>>) {
     }
 }
 
+/**
+ * A brush swatch for demo
+ * @param color a pair of gradient and its title
+ */
 @Composable
 fun BrushSwatch(color: Pair<String, Brush>) {
     BoxWithConstraints(

@@ -45,7 +45,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixHorizontal(from: Color, to: Color): Brush {
+    fun horizontal(from: Color, to: Color): Brush {
         return Brush.horizontalGradient(listOf(from, to))
     }
 
@@ -55,7 +55,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixVertical(from: Color, to: Color): Brush {
+    fun vertical(from: Color, to: Color): Brush {
         return Brush.verticalGradient(listOf(from, to))
     }
 
@@ -64,7 +64,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixHorizontal(colors: List<Color>): Brush {
+    fun horizontal(colors: List<Color>): Brush {
         return Brush.horizontalGradient(colors)
     }
 
@@ -73,7 +73,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixVertical(colors: List<Color>): Brush {
+    fun vertical(colors: List<Color>): Brush {
         return Brush.verticalGradient(colors)
     }
 
@@ -83,7 +83,7 @@ object GradientMixer {
      * @param outer the outer color
      * @return a new [Brush] for use in composables
      */
-    fun mixRadial(inner: Color,outer: Color): Brush {
+    fun radial(inner: Color, outer: Color): Brush {
         return Brush.radialGradient(listOf(inner,outer))
     }
 
@@ -92,7 +92,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixRadial(colors: List<Color>): Brush {
+    fun radial(colors: List<Color>): Brush {
         return Brush.radialGradient(colors)
     }
 
@@ -102,8 +102,21 @@ object GradientMixer {
      * @param end the ending color
      * @return a new [Brush] for use in composables
      */
-    fun mixSweepBlend(start: Color, end: Color): Brush {
+    fun sweepBlend(start: Color, end: Color): Brush {
         return Brush.sweepGradient(listOf(start,end,end,start))
+    }
+
+    /**
+     * A complete blend mix sweep between two colors, ends in the started color for a clean blended sweep
+     * @param colors list of colors to sweep
+     * @return a new [Brush] for use in composables
+     */
+    fun sweepBlend(colors: List<Color>): Brush {
+        val blendFriendlyList = mutableListOf<Color>()
+        blendFriendlyList.addAll(colors)
+        val finalColor = colors[0]
+        blendFriendlyList.add(finalColor)
+        return Brush.sweepGradient(blendFriendlyList)
     }
 
     /**
@@ -112,7 +125,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixTopLeftToBottomRight(from: Color, to: Color): Brush {
+    fun topLeftToBottomRight(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(0f,0f))
     }
 
@@ -121,7 +134,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixTopLeftToBottomRight(colors: List<Color>): Brush {
+    fun topLeftToBottomRight(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(0f,0f))
     }
 
@@ -131,7 +144,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixTopToBottom(from: Color, to: Color): Brush {
+    fun topToBottom(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(0f,0f),end = Offset(0f, Float.POSITIVE_INFINITY))
     }
 
@@ -140,7 +153,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixTopToBottom(colors: List<Color>): Brush {
+    fun topToBottom(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(0f,0f),end = Offset(0f, Float.POSITIVE_INFINITY))
     }
 
@@ -150,7 +163,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomToTop(from: Color, to: Color): Brush {
+    fun bottomToTop(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),end = Offset(0f,0f),start = Offset(0f, Float.POSITIVE_INFINITY))
     }
 
@@ -159,7 +172,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomToTop(colors: List<Color>): Brush {
+    fun bottomToTop(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,end = Offset(0f,0f),start = Offset(0f, Float.POSITIVE_INFINITY))
     }
 
@@ -169,7 +182,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixLeftToRight(from: Color, to: Color): Brush {
+    fun leftToRight(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(0f,0f),end = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -178,7 +191,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixLeftToRight(colors: List<Color>): Brush {
+    fun leftToRight(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(0f,0f),end = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -188,7 +201,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixRightToLeft(from: Color, to: Color): Brush {
+    fun rightToLeft(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),end = Offset(0f,0f),start = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -197,7 +210,7 @@ object GradientMixer {
      * @param colors the list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixRightToLeft(colors: List<Color>): Brush {
+    fun rightToLeft(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,end = Offset(0f,0f),start = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -207,7 +220,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomLeftToTopRight(from: Color, to: Color): Brush {
+    fun bottomLeftToTopRight(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(0f,Float.POSITIVE_INFINITY),end = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -216,7 +229,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomLeftToTopRight(colors: List<Color>): Brush {
+    fun bottomLeftToTopRight(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(0f,Float.POSITIVE_INFINITY),end = Offset(Float.POSITIVE_INFINITY, 0f))
     }
 
@@ -226,7 +239,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixTopRightToBottomLeft(from: Color, to: Color): Brush {
+    fun topRightToBottomLeft(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(Float.POSITIVE_INFINITY,0f),end = Offset(0f,Float.POSITIVE_INFINITY))
     }
 
@@ -235,7 +248,7 @@ object GradientMixer {
      * @param colors the list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixTopRightToBottomLeft(colors: List<Color>): Brush {
+    fun topRightToBottomLeft(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(Float.POSITIVE_INFINITY,0f),end = Offset(0f,Float.POSITIVE_INFINITY))
     }
 
@@ -245,7 +258,7 @@ object GradientMixer {
      * @param to the second color
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomRightToTopLeft(from: Color, to: Color): Brush {
+    fun bottomRightToTopLeft(from: Color, to: Color): Brush {
         return Brush.linearGradient(listOf(from, to),start = Offset(Float.POSITIVE_INFINITY,Float.POSITIVE_INFINITY),end = Offset(0f,0f))
     }
 
@@ -254,14 +267,7 @@ object GradientMixer {
      * @param colors list of colors
      * @return a new [Brush] for use in composables
      */
-    fun mixBottomRightToTopLeft(colors: List<Color>): Brush {
+    fun bottomRightToTopLeft(colors: List<Color>): Brush {
         return Brush.linearGradient(colors,start = Offset(Float.POSITIVE_INFINITY,Float.POSITIVE_INFINITY),end = Offset(0f,0f))
     }
-
-
-
-
-
-
-
 }
