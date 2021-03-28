@@ -39,6 +39,13 @@ Eg.
 ![](https://media.giphy.com/media/CTRkESw2qqbuBLgR86/giphy.gif)
 
 
+### Palette references
+
+* [Material Colors](https://www.materialui.co/colors)
+* [Flat Colors](https://www.materialui.co/flatuicolors)
+* [Cool Colors](https://www.materialui.co/htmlcolors)
+* [Dracula Colors](https://draculatheme.com/contribute/)
+
 
 ### Using Gradients
 
@@ -64,6 +71,9 @@ Set reversed to true in params to simply reverse any gradient
 ```
 
 ![](https://media.giphy.com/media/W5pC7NKZVsKcu7bEh8/giphy.gif)
+
+Holi's GradientMixer is a container for gradient (Compose Brush) generating functions. These functions act as wrappers around Compose's gradient generators so that you don't have to figure out offset values with their directions. 
+The idea behind this gradient mixer is easy access to gradient building.
 
 ## Licensing
 
@@ -91,3 +101,7 @@ Set reversed to true in params to simply reverse any gradient
   SOFTWARE.
  
 ```
+
+## Disclaimer
+
+Holi uses color palettes from the reference sites, these colors / swatches are free to use. A big thanks to the maintainers for making these color palettes.
