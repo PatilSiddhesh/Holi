@@ -7,7 +7,7 @@ plugins {
 
 def holiVersionName = "0.0.1"
 def holiArtifactId = "holi"
-def holiGroupId = "com.siddheshpatil"
+def holiGroupId = "com.siddroid"
 
 android {
     compileSdkVersion 30
