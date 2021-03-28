@@ -1,7 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
+
 }
+
+def holiVersionName = "0.0.1"
+def holiArtifactId = "holi"
+def holiGroupId = "com.siddheshpatil"
 
 android {
     compileSdkVersion 30
@@ -13,7 +19,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -28,7 +33,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '1.8'
         useIR = true
     }
     buildFeatures {
@@ -40,6 +45,8 @@ android {
     }
 }
 
+
+
 dependencies {
 
     // --> Core Dependencies
@@ -50,4 +57,58 @@ dependencies {
     implementation "androidx.compose.ui:ui:$projectComposeVersion"
     implementation "androidx.compose.foundation:foundation:$projectComposeVersion"
     implementation "androidx.compose.material:material:$projectComposeVersion"
+}
+
+
+publishing {
+
+    def githubProperties = new Properties()
+    githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
+
+    publications { pub ->
+        aar(MavenPublication) {
+            groupId holiGroupId
+            artifactId holiArtifactId
+            version holiVersionName
+            artifact("$buildDir/outputs/aar/Holi-release.aar")
+
+            pom.withXml {
+                final dependenciesNode = asNode().appendNode('dependencies')
+                ext.addDependency = { Dependency dep, String scope ->
+                    if (dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                        return
+                    final dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dep.group)
+                    dependencyNode.appendNode('artifactId', dep.name)
+                    dependencyNode.appendNode('version', dep.version)
+                    dependencyNode.appendNode('scope', scope)
+                    if (!dep.transitive) {
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        exclusionNode.appendNode('groupId', '*')
+                        exclusionNode.appendNode('artifactId', '*')
+                    } else if (!dep.properties.excludeRules.empty) {
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        dep.properties.excludeRules.each { ExcludeRule rule ->
+                            exclusionNode.appendNode('groupId', rule.group ?: '*')
+                            exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                        }
+                    }
+                }
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "implementation") }
+                configurations.api.getDependencies().each { dep -> addDependency(dep, "implementation") }
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "runtime") }
+            }
+        }
+    }
+
+        repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/patilsiddhesh/holi")
+            credentials {
+                username = githubProperties['gpr.usr']
+                password = githubProperties['gpr.key']
+            }
+        }
+    }
 }
