@@ -1,4 +1,5 @@
-# Holi - A library of colors, gradients and utils built using Jetpack Compose for Android
+# Holi
+### A library of colors, gradients and utils built using Jetpack Compose for Android
 
 ## What does Holi do?
 
