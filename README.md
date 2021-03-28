@@ -5,6 +5,7 @@
 
 * A wide collection of colors from different palettes for easy access in your pet projects
 * Provides easy gradient building functions that all your composable brushes need
+* Just 28 KB in size! Over 450 predefined colors and endless gradients. 
 
 ### Color Palettes
 
@@ -22,3 +23,7 @@ Cool Colors             |  Material colors | Flat colors | Dracula colors
 Directional Gradients      |  Directional multi color gradients
 :-------------------------:|:-------------------------: 
 ![](https://media.giphy.com/media/d2ZAyZDFgFm5ZPX8v4/giphy.gif)  |  ![](https://media.giphy.com/media/80odY16jAXAuUCDyds/giphy.gif) 
+
+### Using colors
+
+![](https://media.giphy.com/media/CTRkESw2qqbuBLgR86/giphy.gif)
