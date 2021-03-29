@@ -65,7 +65,7 @@ Using gradients is super easy with Holi, just use GradientMixer and choose from 
     )
 ```
 
-#### 3. Reversing colors
+#### 3. Reversing gradients
 ```kotlin
    GradientMixer.rightToLeft(FlatColor.CARROT,FlatColor.POMEGRANATE,reversed = true)
 ```
