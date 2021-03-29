@@ -78,7 +78,7 @@ The idea behind this gradient mixer is easy access to gradient building.
 
 ## How to use
 
-Holi is available on MavenCentral, declare maven central in your repositories and implement the latest version in your dependencies.
+Holi is available on MavenCentral, declare maven central in your repositories and implement the latest version in dependencies.
 
 #### Step 1. Add to repositories
 
@@ -92,7 +92,6 @@ allprojects {
 
 ```
 
-Learn how to create a github access token [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
 #### Step 2. Add in dependencies
 
