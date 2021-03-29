@@ -113,7 +113,7 @@ object GradientMixer {
     }
 
     /**
-     * Mix a list of colors vertically
+     * Mix a list of colors radially
      * @param colors list of colors
      * @param reversed reverse the gradient
      * @return a new [Brush] for use in composables
@@ -359,7 +359,7 @@ object GradientMixer {
     }
 
     /**
-     * Mix two colors  from bottom left to top right corner
+     * Mix two colors from bottom left to top right corner
      * @param from the first color
      * @param to the second color
      * @param reversed reverse the gradient
