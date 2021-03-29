@@ -1,6 +1,9 @@
 # Holi
 ### A library of colors, gradients and utils built using Jetpack Compose for Android
 
+[![License MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](https://raw.githubusercontent.com/patilsiddhesh/Holi/main/LICENSE)
+![Maven Central](https://img.shields.io/maven-central/v/com.siddroid/holi?label=Maven%20Central&style=flat-square)
+
 ### Features
 
 * A wide collection of colors from different palettes for easy access in your pet projects
