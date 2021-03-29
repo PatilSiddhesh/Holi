@@ -75,6 +75,45 @@ Using gradients is super easy with Holi, just use GradientMixer and choose from 
 Holi's GradientMixer is a container for gradient (Compose Brush) generating functions. These functions act as wrappers around Compose's gradient generators so that you don't have to figure out offset values with their directions. 
 The idea behind this gradient mixer is easy access to gradient building.
 
+
+## How to use
+
+Currently available through Github Packages. 
+P.S. I'm figuring out easier publishing on MavenCentral or Jitpack.
+
+#### Step 1. Add to repositories
+
+```groovy
+
+allprojects {
+		repositories {
+            maven {
+                url = "https://maven.pkg.github.com/patilsiddhesh/holi/"
+                credentials {
+                    username = YOUR_GITHUB_USERNAME
+                    password = YOUR_GITHUB_ACCESS_TOKEN
+                }
+            }
+		}
+	}
+
+```
+
+Learn how to create a github access token [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+
+#### Step 2. Add in dependencies
+
+```groovy
+
+dependencies {
+
+    implementation 'com.siddroid:holi:0.0.4' 
+
+}
+
+```
+
+
 ## Licensing
 
 ```
