@@ -51,12 +51,12 @@ Eg.
 
 Using gradients is super easy with Holi, just use GradientMixer and choose from various gradient brush generating functions.
 
-Eg.
+#### 1. Mixing two colors
 ```kotlin
-   GradientMixer.sweepBlend(MaterialColor.RED,MaterialColor.GREEN)
+   GradientMixer.bottomLeftToTopRight(MaterialColor.RED,MaterialColor.GREEN)
 ```
 
-Pass a list of colors for multi color mixing, every function can either take two colors or a list of colors
+#### 2. Mixing more than two colors
 ```kotlin
    GradientMixer.topRightToBottomLeft(
     listOf(MaterialColor.RED,
@@ -65,7 +65,7 @@ Pass a list of colors for multi color mixing, every function can either take two
     )
 ```
 
-Set reversed to true in params to simply reverse any gradient
+#### 3. Reversing colors
 ```kotlin
    GradientMixer.rightToLeft(FlatColor.CARROT,FlatColor.POMEGRANATE,reversed = true)
 ```
