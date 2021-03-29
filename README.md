@@ -78,8 +78,7 @@ The idea behind this gradient mixer is easy access to gradient building.
 
 ## How to use
 
-Currently available through Github Packages. 
-P.S. I'm figuring out easier publishing on MavenCentral or Jitpack.
+Holi is available on MavenCentral, declare mavenCentral in your repositories and implement the latest version in your dependencies.
 
 #### Step 1. Add to repositories
 
@@ -87,14 +86,8 @@ P.S. I'm figuring out easier publishing on MavenCentral or Jitpack.
 
 allprojects {
 		repositories {
-            maven {
-                url = "https://maven.pkg.github.com/patilsiddhesh/holi/"
-                credentials {
-                    username = YOUR_GITHUB_USERNAME
-                    password = YOUR_GITHUB_ACCESS_TOKEN
-                }
-            }
-		}
+            mavenCentral()
+        }
 	}
 
 ```
@@ -107,8 +100,8 @@ Learn how to create a github access token [here](https://docs.github.com/en/gith
 
 dependencies {
 
-    implementation 'com.siddroid:holi:0.0.4' 
-
+    implementation 'com.siddroid:holi:0.0.6'
+    
 }
 
 ```
