@@ -102,7 +102,7 @@ allprojects {
 
 dependencies {
 
-    implementation 'com.siddroid:holi:0.0.6'
+    implementation 'com.siddroid:holi:0.0.7'
     
 }
 
