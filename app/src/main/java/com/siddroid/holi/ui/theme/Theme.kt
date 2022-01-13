@@ -6,6 +6,7 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import com.siddroid.holi.colors.MaterialColor
+import com.siddroid.holi.localComposition.HoliPaletteComposition
 
 private val DarkColorPalette = darkColors(
     primary = MaterialColor.RED_200,
@@ -27,6 +28,7 @@ fun HoliTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable()
         LightColorPalette
     }
 
+    // Wrap this with `HoliPaletteComposition` composable to provide local-composition
     MaterialTheme(
         colors = colors,
         content = content
