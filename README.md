@@ -102,7 +102,7 @@ allprojects {
 
 dependencies {
 
-    implementation 'com.siddroid:holi:0.0.7'
+    implementation 'com.siddroid:holi:1.0.1'
 
 }
 
@@ -142,7 +142,7 @@ Text(
 ```
   MIT License
 
-  Copyright (c) 2021 Siddhesh Patil, Siddroid.com
+  Copyright (c) 2022 Siddhesh Patil, Siddroid.com
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
