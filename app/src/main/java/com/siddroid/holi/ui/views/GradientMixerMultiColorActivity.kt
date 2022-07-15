@@ -35,7 +35,6 @@ import com.siddroid.holi.data.samples.HoliSampleColorFactory
 import com.siddroid.holi.ui.composables.HoliLazyBrushColumn
 
 class GradientMixerMultiColorActivity : AppCompatActivity() {
-    @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

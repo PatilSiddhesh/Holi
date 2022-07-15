@@ -2,16 +2,22 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
-apply from: 'artifactory-nexus.gradle'
 
+ext {
+    PUBLISH_GROUP_ID = GROUPID
+    PUBLISH_VERSION = VERSION_NAME
+    PUBLISH_ARTIFACT_ID = POM_ARTIFACT_ID
+}
+
+apply from: "scripts/publish-module.gradle"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 32
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -23,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
         useIR = true
     }
     buildFeatures {
